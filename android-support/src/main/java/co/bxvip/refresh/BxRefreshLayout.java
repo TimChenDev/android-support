@@ -602,6 +602,12 @@ public class BxRefreshLayout extends RelativeLayout implements PullListener, Nes
     }
 
     public void hideRefreshLayout() {
+        isOverScrollTopShow = false;
+        isOverScrollBottomShow = false;
+        setMaxHeadHeight(mOverScrollHeight);
+        setHeaderHeight(mOverScrollHeight);
+        setMaxBottomHeight(mOverScrollHeight);
+        setBottomHeight(mOverScrollHeight);
         if (mHeadLayout != null) mHeadLayout.setVisibility(GONE);
         if (mBottomLayout != null) mBottomLayout.setVisibility(GONE);
     }
