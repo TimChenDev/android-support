@@ -601,6 +601,11 @@ public class BxRefreshLayout extends RelativeLayout implements PullListener, Nes
         }
     }
 
+    public void hideRefreshLayout() {
+        if (mHeadLayout != null) mHeadLayout.setVisibility(GONE);
+        if (mBottomLayout != null) mBottomLayout.setVisibility(GONE);
+    }
+
     /**
      * 设置固定在顶部的header
      */
